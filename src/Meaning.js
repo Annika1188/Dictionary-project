@@ -1,3 +1,5 @@
+import Synonyms from "./Synonyms";
+
 export default function Meaning(props) {
   return (
     <div className="Meaning">
@@ -6,9 +8,14 @@ export default function Meaning(props) {
         return (
           <div key="index">
             <p>
+              {" "}
+              <strong>Definitions:</strong>
               {definition.definition}
               <br />
+              <stong>Example:</stong>
               <em> {definition.example}</em>
+              <br />
+              <Synonyms synonyms={definition.synonyms} />
             </p>
           </div>
         );
